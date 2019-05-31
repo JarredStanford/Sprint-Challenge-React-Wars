@@ -27,12 +27,20 @@ class App extends Component {
         this.setState({
           starwarsChars: data.results
         });
+        /*Stretch attempt
+        if (data.next !== null) {
+          return this.getCharacters(data.next)
+          I got this to make an array for each of the pages. But it would just reset the state to the new page.
+          I tried many different ways but I didn't get there. I think I was getting close but deleted all the code instead
+          of commenting it out. oops!
+          */
       })
       .catch(err => {
         throw new Error(err);
       });
   };
-
+  /*Stretch attempt
+   */
   render() {
     return (
       <div className="App">
