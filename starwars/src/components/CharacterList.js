@@ -3,9 +3,9 @@ import Character from "./Character";
 
 const CharacterList = props => {
   return (
-    <div>
+    <div className="cards">
       {props.characters.map(character => (
-        <Character key={character.id} characterOnProps={character} />
+        <Character key={character.created} characterOnProps={character} />
       ))}
     </div>
   );

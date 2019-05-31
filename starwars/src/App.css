@@ -1,12 +1,60 @@
+body {
+  width: 800px;
+  margin: auto;
+  background-repeat: no-repeat;
+  min-height: calc(100vh);
+  padding-top: 2rem;
+  background-position: center;
+}
+
+@media (min-width: 1000px) {
+  body {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    max-width: 500px;
+    width: 90%;
+  }
+}
+
 .App {
   text-align: center;
 }
+
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  align-items: center;
+  margin: auto;
+}
 .character {
   background-color: white;
-  width: 20%;
+  opacity: 0.8;
+  margin: 1%;
+  padding: 1%;
+  border-radius: 15px;
+  flex: 1 1 auto;
+  flex-basis: 25%;
+}
+
+@media (max-width: 500px) {
+  .cards {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .character {
+    width: 80%;
+  }
 }

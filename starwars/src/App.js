@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getCharacters("https://swapi.co/api/people/");
+    this.getCharacters("https://swapi.co/api/people/?page=");
   }
 
   getCharacters = URL => {
@@ -24,7 +24,9 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+        this.setState({
+          starwarsChars: data.results
+        });
       })
       .catch(err => {
         throw new Error(err);
